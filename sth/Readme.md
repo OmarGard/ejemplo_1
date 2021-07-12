@@ -140,7 +140,7 @@ Notamos que para un valor del 99%, 95% y 90% de significancia, el estadístico d
 Partiendo de la hipótesis de que la serie tiene raíces unitarias, podemos idealizar una forma en la que podemos hacer nuestra serie estacionaria. Supongamos que nuestra serie se puede modelas de la siguiente forma:
 ```math
 Y_t = \beta_0 + \beta_1  t + \epsilon_t 
-``
+```
 Donde:
 $$ 
 Y_t \text{ es el valor actual de la serie} \\
