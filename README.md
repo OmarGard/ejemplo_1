@@ -1,11 +1,5 @@
 # ejemplo_1
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+![GitHub contributors](https://img.shields.io/github/contributors/OmarGard/ejemplo_1?style=for-the-badge)
 
 <!-- PROJECT LOGO -->
 <br />
