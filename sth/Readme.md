@@ -1,4 +1,4 @@
-
+﻿
 # Postwork Sesión 6. 
 
 #### Objetivo
@@ -138,44 +138,42 @@ Y obtenemos lo siguiente:
 Notamos que para un valor del 99%, 95% y 90% de significancia, el estadístico de prueba supera a todas las pruebas, así que por lo tanto nuestra serie es __no estacionaria__.
 
 Partiendo de la hipótesis de que la serie tiene raíces unitarias, podemos idealizar una forma en la que podemos hacer nuestra serie estacionaria. Supongamos que nuestra serie se puede modelas de la siguiente forma:
-```math
-Y_t = \beta_0 + \beta_1  t + \epsilon_t 
-``
+
+![\Large Y_t=\beta_0 +\beta_1t+\epsilon_t](https://latex.codecogs.com/svg.latex?\Large&space;Y_t=\beta_0+\beta_1t+\epsilon_t) 
 Donde:
-$$ 
-Y_t \text{ es el valor actual de la serie} \\
-B_0 \text{ es un coeficiente de intercepto} \\
-B_1 \text{ es un coeficiente de la variable de tiempo} \\
-e_t \text{ es un error proveniente de una distribución normal que puede ser ruido} blanco
-$$
+
+![\Large Y_t\text{&space;es&space;el&space;valor&space;actual de&space;la &space;serie}](https://latex.codecogs.com/svg.latex?\Large&space;Y_t\text{&space;es&space;el&space;valor&space;actual&space;de&space;la&space;serie})
+![\Large B_0\text{&space;es&space;un&space;coeficiente&space;de&space;intercepto}](https://latex.codecogs.com/svg.latex?\Large&space;B_0\text{&space;es&space;un&space;coeficiente&space;de&space;intercepto})
+![\Large B_1\text{&space;es&space;un&space;coeficiente&space;de&space;la&space;variable&space;de&space;tiempo}](https://latex.codecogs.com/svg.latex?\Large&space;B_1\text{&space;es&space;un&space;coeficiente&space;de&space;la&space;variable&space;de&space;tiempo})
+![\Large e_t\text{&space;es&space;un&space;error&space;proveniente&space;de&space;una&space;distribución&space;normal&space;que&space;puede&space;ser&space;ruido&space;blanco}](https://latex.codecogs.com/svg.latex?\Large&space;e_t\text{&space;es&space;un&space;error&space;proveniente&space;de&space;una&space;distribucion&space;normal&space;que&space;puede&space;ser&space;ruido&space;blanco})
+
 Definimos:
-$$
-z_t = y_t - y_{t-1} \\ \text{ Calculamos la diferencia entre un valor y su consecutivo para } y_t 
-$$
+
+![\Large z_t = y_t - y_{t-1}](https://latex.codecogs.com/svg.latex?\Large&space;z_t=y_t-y_{t-1})
+![\Large \text{ Calculamos la diferencia entre un valor y su consecutivo para } y_t ](https://latex.codecogs.com/svg.latex?\Large&space;\text{&space;Calculamos&space;la&space;diferencia&space;entre&space;un&space;valor&space;y&space;su&space;consecutivo&space;para&space;}y_t)
+
+
 Entonces sustituyendo
-$$
-z_t = (\beta_0 + \beta_1  t + \epsilon_t ) - (\beta_0 + \beta_1  t_{t-1} + \epsilon_{t-1} ) \\
-z_t = \beta_1 + (\epsilon_t - \epsilon_{t-1})
-$$
+
+![\Large z_t = (\beta_0 + \beta_1  t + \epsilon_t ) - (\beta_0 + \beta_1  t_{t-1} + \epsilon_{t-1} )](https://latex.codecogs.com/svg.latex?\Large&space;z_t&space;=&space;[\beta_0+\beta_1t+\epsilon_t\]-[\beta_0+\beta_1t_{t-1}+\epsilon_{t-1}])
+![\Large z_t =\beta_1 + (\epsilon_t - \epsilon_{t-1})](https://latex.codecogs.com/svg.latex?\Large&space;z_t=\beta_1+[\epsilon_t-\epsilon_{t-1}])
+
 Ahora si observamos la esperanza de la nueva serie, podemos notar que:
-$$
-E(Z_t) = B_1 
-$$ 
+
+![\Large E(Z_t) = B_1](https://latex.codecogs.com/svg.latex?\Large&space;E[Z_t]=B_1)
 
 ya que B_1 es una constante así que no se ve afectada, y (e_t - e_(t-1)) son errores que se asumen vienen de una distribución de ruido blanco o normal N(0,..).
 
- Y si observamos la varianza, podemos notar que 
-$$
-Var(Z_t) = 2K^2
-$$ 
+ Y si observamos la varianza, podemos notar que:
+ ![\Large Var(Z_t) = 2K^2](https://latex.codecogs.com/svg.latex?\Large&space;Var[Z_t]=2K^2)
+ 
 ya que B_1 es una constante, así que no afecta la varianza, y (e_t - e_(t-1)) son errores independientes uno del otro, ya que vienen de una distribución normal, así que podemos tomar la suma  de sus varianzas, y supongamos que la varianza de e_t es algún número K^2.
 
 Entonces la varianza de  e_(t-1) es igual k^2. 
 
 Ya que provienen de la misma distribución, entonces nos queda:
-$$ 
-K^2 + K^2 = 2K^2
-$$
+
+![\Large K^2 + K^2 = 2K^2](https://latex.codecogs.com/svg.latex?\Large&space;K^2+K^2=2K^2)
 
 Entonces tenemos que la nueva serie de diferencias tiene una media y una varianza constante, por lo tanto, debe de ser estacionaria, este proceso lo podemos repetir varias veces hasta obtener una serie estacionaria proveniente de nuestra serie original. Para calcular el número de veces, realizaremos una prueba de __Dickey - Fuller__ para cada iteración de diferencias, obteniendo lo siguiente:
 ```r
