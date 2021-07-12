@@ -140,6 +140,7 @@ Notamos que para un valor del 99%, 95% y 90% de significancia, el estadístico d
 Partiendo de la hipótesis de que la serie tiene raíces unitarias, podemos idealizar una forma en la que podemos hacer nuestra serie estacionaria. Supongamos que nuestra serie se puede modelas de la siguiente forma:
 
 ![\Large Y_t=\beta_0 +\beta_1t+\epsilon_t](https://latex.codecogs.com/svg.latex?\Large&space;Y_t=\beta_0+\beta_1t+\epsilon_t) 
+
 Donde:
 
 ![\Large Y_t\text{&space;es&space;el&space;valor&space;actual de&space;la &space;serie}](https://latex.codecogs.com/svg.latex?\Large&space;Y_t\text{&space;es&space;el&space;valor&space;actual&space;de&space;la&space;serie})
@@ -156,6 +157,7 @@ Definimos:
 Entonces sustituyendo
 
 ![\Large z_t = (\beta_0 + \beta_1  t + \epsilon_t ) - (\beta_0 + \beta_1  t_{t-1} + \epsilon_{t-1} )](https://latex.codecogs.com/svg.latex?\Large&space;z_t&space;=&space;[\beta_0+\beta_1t+\epsilon_t\]-[\beta_0+\beta_1t_{t-1}+\epsilon_{t-1}])
+
 ![\Large z_t =\beta_1 + (\epsilon_t - \epsilon_{t-1})](https://latex.codecogs.com/svg.latex?\Large&space;z_t=\beta_1+[\epsilon_t-\epsilon_{t-1}])
 
 Ahora si observamos la esperanza de la nueva serie, podemos notar que:
@@ -165,6 +167,7 @@ Ahora si observamos la esperanza de la nueva serie, podemos notar que:
 ya que B_1 es una constante así que no se ve afectada, y (e_t - e_(t-1)) son errores que se asumen vienen de una distribución de ruido blanco o normal N(0,..).
 
  Y si observamos la varianza, podemos notar que:
+ 
  ![\Large Var(Z_t) = 2K^2](https://latex.codecogs.com/svg.latex?\Large&space;Var[Z_t]=2K^2)
  
 ya que B_1 es una constante, así que no afecta la varianza, y (e_t - e_(t-1)) son errores independientes uno del otro, ya que vienen de una distribución normal, así que podemos tomar la suma  de sus varianzas, y supongamos que la varianza de e_t es algún número K^2.
