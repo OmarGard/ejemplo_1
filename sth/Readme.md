@@ -139,7 +139,8 @@ Notamos que para un valor del 99%, 95% y 90% de significancia, el estadístico d
 
 Partiendo de la hipótesis de que la serie tiene raíces unitarias, podemos idealizar una forma en la que podemos hacer nuestra serie estacionaria. Supongamos que nuestra serie se puede modelas de la siguiente forma:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=Y_t&space;=&space;\beta_0&space;&plus;&space;\beta_1&space;t&space;&plus;&space;\epsilon_t" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Y_t&space;=&space;\beta_0&space;&plus;&space;\beta_1&space;t&space;&plus;&space;\epsilon_t" title="Y_t = \beta_0 + \beta_1 t + \epsilon_t" /></a>
+![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}) 
+
 
 Donde:
 $$ 
